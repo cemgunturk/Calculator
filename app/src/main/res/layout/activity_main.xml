@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Calculator"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/birinciDeger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:hint="Birinci Rakamı Giriniz"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/ikinciDeger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:hint="İkinci Rakamı Giriniz"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birinciDeger" />
+
+    <Button
+        android:id="@+id/toplama"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:onClick="toplamaYap"
+        android:text="Toplama"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ikinciDeger" />
+
+    <Button
+        android:id="@+id/bolme"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="44dp"
+        android:onClick="bolmeYap"
+        android:text="Bölme"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/carpma"
+        app:layout_constraintStart_toEndOf="@+id/carpma" />
+
+    <Button
+        android:id="@+id/carpma"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:onClick="carpmaYap"
+        android:text="Çarpma"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/toplama"
+        app:layout_constraintTop_toBottomOf="@+id/toplama" />
+
+    <Button
+        android:id="@+id/cıkartma"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="44dp"
+        android:onClick="cıkartmaYap"
+        android:text="Çıkartma"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/toplama"
+        app:layout_constraintStart_toEndOf="@+id/toplama" />
+
+    <TextView
+        android:id="@+id/sonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sonuç : "
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carpma"
+        app:layout_constraintVertical_bias="0.436" />
+</androidx.constraintlayout.widget.ConstraintLayout>
